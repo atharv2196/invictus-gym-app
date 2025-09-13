@@ -1,0 +1,15 @@
+# Netlify Build & Redirect Configuration
+
+[build]
+  # This command tells Netlify how to build your site.
+  command = "npm run build"
+  
+  # This tells Netlify where the final website files are.
+  publish = "dist"
+
+# This is the magic rule that fixes the blank page problem.
+#It tells Netlify to redirect all page requests to your main index.html file
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
