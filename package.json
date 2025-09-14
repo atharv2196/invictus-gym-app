@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://atharv2196.github.io/invictus-gym-app",
+  "homepage": "https://www.invictusgym.biz",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
