@@ -1,15 +1,20 @@
-# Netlify Build & Redirect Configuration
+# This is the standard, correct configuration for a Vite + React project.
 
 [build]
   # This command tells Netlify how to build your site.
   command = "npm run build"
   
-  # This tells Netlify where the final website files are.
+  # This tells Netlify where the final, published website files are located.
   publish = "dist"
 
-# This is the magic rule that fixes the blank page problem.
-#It tells Netlify to redirect all page requests to your main index.html file
+# This is the magic rule that fixes the "blank page" problem on refresh.
+# It tells Netlify to redirect all page requests to your main index.html file,
+# allowing your React code to handle the routing.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+```
+
+
+
