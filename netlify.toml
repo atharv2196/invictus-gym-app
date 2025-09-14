@@ -1,20 +1,13 @@
-# This is the standard, correct configuration for a Vite + React project.
-
 [build]
-  # This command tells Netlify how to build your site.
   command = "npm run build"
-  
-  # This tells Netlify where the final, published website files are located.
   publish = "dist"
 
-# This is the magic rule that fixes the "blank page" problem on refresh.
-# It tells Netlify to redirect all page requests to your main index.html file,
-# allowing your React code to handle the routing.
+[dev]
+  command = "npm run dev"
+  port = 8888
+  publish = "dist"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-```
-
-
-
